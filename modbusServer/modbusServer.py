@@ -35,7 +35,7 @@ try:
         ##print(coil_state)
 
         # Delay for a certain period
-        time.sleep(0.1)
+        time.sleep(1)
 
 except KeyboardInterrupt:
     print("Server stopped")
