@@ -8,7 +8,7 @@ set SUBNET_MASK=255.255.255.0
 set DEFAULT_GATEWAY=10.0.0.254
 
 rem Set the primary and secondary DNS servers
-set DNS1=8.8.8.8
+set DNS1=0.0.0.0
 
 rem Apply the static IP configuration
 netsh interface ip set address name=%INTERFACE_NAME% static %IP_ADDRESS% %SUBNET_MASK% %DEFAULT_GATEWAY%
