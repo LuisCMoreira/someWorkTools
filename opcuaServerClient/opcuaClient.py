@@ -4,7 +4,7 @@ sys.path.append('./packages')
 from opcua import Client
 
 # Define the OPC UA server endpoint URL
-url = "opc.tcp://localhost:4840/freeopcua/server/"
+url = "opc.tcp://192.168.1.1:4840/"
 
 # Create a client object
 client = Client(url)
@@ -17,7 +17,7 @@ try:
     root_node = client.get_root_node()
 
     # Get the objects node
-    objects_node = root_node.get_child(["0:Objects"])
+    objects_node = root_node.get_child(["0:Server"])
 
     # Get the variable node
     variable_node = objects_node.get_child(["2:MyObject", "2:MyVariable"])
