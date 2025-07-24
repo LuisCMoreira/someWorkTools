@@ -5,7 +5,7 @@ import modbus_server
 import time
 
 # Create a Modbus server instance
-s = modbus_server.Server( host="10.1.1.4",port=505)
+s = modbus_server.Server( host="192.168.38.10",port=502)
 
 # Start the Modbus server
 s.start()
@@ -13,7 +13,7 @@ s.start()
 # Initialize a variable to track the coil state
 coil_state = False
 
-start_address = 10
+start_address = 3
 values = [300]
 encoding = 'h'
 signal= -1
@@ -32,7 +32,9 @@ try:
             signal=-1
         values=[values[0]+signal]
         
-        ##print(coil_state)
+        print(coil_state)
+        print(values)
+
 
         # Delay for a certain period
         time.sleep(1)
